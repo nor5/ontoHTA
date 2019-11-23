@@ -10,11 +10,31 @@
      xmlns:obda="https://w3id.org/obda/vocabulary#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:metadata="http://data.bioontology.org/metadata/"
      xmlns:ontolurgences="http://www.limics.fr/ontologies/ontolurgences#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020">
         <owl:imports rdf:resource="http://www.limcs.fr/ontologies/ontolurgences"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -256,6 +276,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#ARAII -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#ARAII">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Actuel -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Actuel">
@@ -282,7 +310,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur">
         <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#TraitementMedicamenteux"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Hypertenseur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Betabloquant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Betabloquant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
     </owl:Class>
     
 
@@ -340,6 +375,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#DiabeteType2">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#DiuritiqueDAnse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#DiuritiqueDAnse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#DiuritiqueThiazidique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#DiuritiqueThiazidique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
     </owl:Class>
     
 
@@ -471,10 +522,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Hypertenseur -->
+    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IEC -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Hypertenseur">
-        <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#TraitementMedicamenteux"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IEC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#InhibiteurCalcique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#InhibiteurCalcique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
     </owl:Class>
     
 
@@ -491,6 +550,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Ionogramme">
         <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#ExamenParaclinique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Kaliemie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Kaliemie">
+        <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#AttributSanguin"/>
     </owl:Class>
     
 
@@ -911,6 +978,124 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#HTASecondaire"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#HTASevere"/>
         </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">si HTA +IR alors IEC</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.limics.fr/ontologies/ontolurgences#Patient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#HTA"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#InsufisanceRenale"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourMaladie"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#x"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#y"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourMaladie"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#x"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#z"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IEC"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#t"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourTraitementReco"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 
