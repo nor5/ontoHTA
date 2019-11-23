@@ -126,7 +126,6 @@
     <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourNombreDeTraitement -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourNombreDeTraitement">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#StrategieTherapeutique"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
     </owl:ObjectProperty>
     
@@ -223,24 +222,11 @@
     
 
 
-    <!-- http://www.limcs.fr/ontologies/ontolurgences#AntecedentFamilial -->
-
-    <rdf:Description rdf:about="http://www.limcs.fr/ontologies/ontolurgences#AntecedentFamilial">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourAntecendentPersonnel"/>
-                <owl:someValuesFrom rdf:resource="http://www.limics.fr/ontologies/ontolurgences#MaladieEtat"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
-    
-
-
     <!-- http://www.limics.fr/ontologies/ontolurgences#Homme -->
 
-    <rdf:Description rdf:about="http://www.limics.fr/ontologies/ontolurgences#Homme">
+    <owl:Class rdf:about="http://www.limics.fr/ontologies/ontolurgences#Homme">
         <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#Humain"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -300,12 +286,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#AntecedentFamlial -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#AntecedentFamlial"/>
-    
-
-
     <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur">
@@ -318,30 +298,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Betabloquant">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#StrategieTherapeutique"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourNombreDeTraitement"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -570,30 +526,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#StrategieTherapeutique"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourNombreDeTraitement"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Objectif -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Objectif">
@@ -704,52 +636,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#PolyTherapie -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#PolyTherapie">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#StrategieTherapeutique"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourNombreDeTraitement"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Sevrage -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Sevrage">
         <rdfs:subClassOf rdf:resource="http://www.limcs.fr/ontologies/ontolurgences#TraitementStyleDeVie"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#StrategieTherapeutique -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#StrategieTherapeutique">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#PolyTherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.limcs.fr/ontologies/ontolurgences#ProtocoleDeSoin"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -762,30 +652,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourModaliteTemporelle"/>
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Actuel"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#StrategieTherapeutique"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#aPourNombreDeTraitement"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Antihypertenseur"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -807,8 +673,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#HTA1">
         <rdf:type rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#HTA"/>
-        <aPourMaladie rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#HTA1"/>
-        <aPourMaladie rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IR1"/>
     </owl:NamedIndividual>
     
 
@@ -816,6 +680,14 @@
     <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IEC1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IEC1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IEC2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IEC2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#IEC"/>
+    </owl:NamedIndividual>
     
 
 
@@ -937,22 +809,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#StrategieTherapeutique"/>
-    </owl:Class>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Bitherapie"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Monotherapie"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020#Tritherapie"/>
-        </owl:members>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1574492499367" name="http://www.limcs.fr/ontologies/ontolurgences" uri="OntolUrgences_extract.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1574492499367" name="http://www.semanticweb.org/noor/ontologies/2019/10/projet_ue3_2019/2020" uri="FILE.owl"/>
+    </group>
+</catalog>
