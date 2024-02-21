@@ -7,5 +7,5 @@ Un exemple de formalisation du raisonnement en SWRL pour les prises en charge th
 SI HTA + femme pendant la grossesse en 1er trimestre alors IEC + ARA2 déconseilles.
 
 ```
-![swrlhta](swrlHTa.png)
+![swrlhta](swrlHta.png)
 ![swrlhta](swrlHTA.png)
